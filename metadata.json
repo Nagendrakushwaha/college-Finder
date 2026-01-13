@@ -1,0 +1,7 @@
+{
+  "name": "College Information Finder",
+  "description": "A comprehensive search tool for Indian colleges, providing detailed information on affiliation, contacts, courses, and infrastructure using Gemini-powered web search grounding.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
