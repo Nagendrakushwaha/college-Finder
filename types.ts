@@ -5,13 +5,14 @@ export interface CollegeDetails {
   district: string;
   universityAffiliation: string;
   collegeType: string;
+  standaloneType: string;
   coursesOffered: string[];
   principalName: string;
   principalContact: string;
   principalEmail: string;
   tpoName: string;
-  tpoContact: string;
   tpoEmail: string;
+  tpoContact: string;
   officialWebsite: string;
   aisheCode: string;
   yearOfEstablishment: string;
@@ -20,8 +21,10 @@ export interface CollegeDetails {
   facultyStrength: string;
   address: string;
   pinCode: string;
+  dataSource: string;
   confidenceScore: number;
   sources: { title: string; uri: string }[];
+  errorNote?: string;
 }
 
 export enum IndiaStates {
@@ -51,7 +54,7 @@ export enum IndiaStates {
   TELANGANA = "Telangana",
   TRIPURA = "Tripura",
   UTTAR_PRADESH = "Uttar Pradesh",
-  UTTARAKHAND = "Uttarakhand",
+  UTTAKHAND = "Uttarakhand",
   WEST_BENGAL = "West Bengal",
   DELHI = "Delhi"
 }
@@ -61,4 +64,11 @@ export interface SearchItem {
   name: string;
   state: string;
   district: string;
+}
+
+export interface BulkProgress {
+  total: number;
+  completed: number;
+  currentName: string;
+  status: 'idle' | 'processing' | 'completed' | 'error';
 }
